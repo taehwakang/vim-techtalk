@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   resources :ip_locations, only: :index
+  get 'ip_country' => 'ip_locations#country'
 end
