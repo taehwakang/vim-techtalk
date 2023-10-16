@@ -10,6 +10,7 @@ module IpApi
       end
     end
 
+    # dineife
     def location(ip)
       response = @connection.get("#{ip}/json/")
       IpLocation.new(**JSON.parse(response.body))
